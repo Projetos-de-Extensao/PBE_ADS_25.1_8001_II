@@ -1,3 +1,4 @@
+```plantuml
 @startmindmap
 * Projeto
 ** Objetivo
@@ -28,3 +29,4 @@
 *** Acesso constante a alimentos e produtos essenciais
 *** Melhoria na qualidade de vida dos moradores
 @endmindmap
+```
