@@ -1,0 +1,27 @@
+@startuml casos_de_uso
+
+skinparam dpi 150
+
+actor Usuario
+actor Administrador
+
+rectangle "Aplicativo de Censo" {
+    usecase "Cadastro" as CU01
+    usecase "Login" as CU02
+    usecase "Preenchimento de Dados" as CU03
+    usecase "Edição" as CU04
+    usecase "Consulta de Dados" as CU05
+    usecase "Validação de Localização" as CU06
+    usecase "Exportação de Relatórios" as CU07
+}
+
+Usuario --> CU01
+Usuario --> CU02
+Usuario --> CU03
+Usuario --> CU04
+Usuario --> CU06
+
+Administrador --> CU05
+Administrador --> CU07
+
+@enduml
