@@ -1,3 +1,4 @@
+```
 @startuml
 left to right direction
 actor "Agente de Censo" as Agente
@@ -21,3 +22,4 @@ rectangle "Aplicativo Censo Primeira" {
 }
 
 @enduml
+```
