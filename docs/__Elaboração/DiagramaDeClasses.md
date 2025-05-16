@@ -1,62 +1,78 @@
 @startuml
+' Título do Diagrama
+title Diagrama de Classes - Questionário Básico Censo Ilha Primeira
 
-class Cliente {
-    -id: int
-    -nome: string
-    -endereco: string
-    -telefone: string
-    +fazerPedidoEncomenda(): Encomenda
-    +acompanharStatus(): string
+' CLASSES PRINCIPAIS
+class Domicilio {
+  - uf: String
+  - municipio: String
+  - distrito: String
+  - subdistrito: String
+  - setor: String
+  - tipoDomicilio: TipoDomicilio
+  - tipoConstrucao: TipoConstrucao
+  - abastecimentoAgua: FormaAgua
+  - destinoLixo: DestinoLixo
+  - numeroBanheiros: int
+  - esgoto: String
 }
 
-class Entregador {
-    -id: int
-    -nome: string
-    -telefone: string
-    +realizarEntrega(): void
+class Morador {
+  - nome: String
+  - sobrenome: String
+  - sexo: Sexo
+  - dataNascimento: Date
+  - parentesco: Parentesco
+  - corRaca: CorRaca
+  - falaPortugues: SimNao
+  - consideraIndigena: SimNao
+  - consideraQuilombola: SimNao
+  - etnia1: String
+  - etnia2: String
+  - falaLinguaIndigena: SimNao
+  - lingua1: String
+  - lingua2: String
+  - lingua3: String
+  - sabeLerEscrever: SimNao
 }
 
-class Encomenda {
-    -id: int
-    -dataPedido: Date
-    -status: string
-    -cliente: Cliente
-    -itens: List<ItemEncomenda>
-    +atualizarStatus(status: string): void
+class Rendimento {
+  - valor: float
+  - faixa: String
+  - tipo: String
 }
 
-class ItemEncomenda {
-    -id: int
-    -descricao: string
-    -peso: double
-    +calcularFrete(): double
+class Mortalidade {
+  - nome: String
+  - sobrenome: String
+  - sexo: Sexo
+  - idadeAnos: int
+  - idadeMeses: int
+  - dataFalecimento: Date
 }
 
-class Administrador {
-    -id: int
-    -nome: string
-    -telefone: string
-    +gerenciarEncomendas(): void
-    +registrarProduto(): void
+class PrestadorInformacao {
+  - quemPrestou: String
+  - nomeOutroMorador: String
 }
 
-class Produto {
-    -id: int
-    -nome: string
-    -descricao: string
-    -preco: double
+class RegistroCivil {
+  - tipoRegistro: String
 }
 
-class Pedido {
-    -id: int
-    -data: Date
-    -status: string
-    +atualizarStatus(status: string): void
+class Contato {
+  - nome: String
+  - email: String
+  - telefone: String
+  - cpf: String
 }
 
-Cliente "1" -- "*" Encomenda
-Encomenda "1" -- "*" ItemEncomenda
-Administrador "1" -- "*" Produto
-Administrador "1" -- "*" Encomenda
+' RELACIONAMENTOS
+Domicilio "1" -- "0..*" Morador
+Domicilio "1" -- "0..*" Mortalidade
+Morador "0..1" -- "1" RegistroCivil
+Morador "0..1" -- "1" Rendimento
+Morador "1" -- "1" PrestadorInformacao
+Morador "1" -- "1" Contato
 
 @enduml

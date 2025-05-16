@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+fieldset {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+label {
+  display: block;
+  margin: 10px 0;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
