@@ -1,24 +1,18 @@
-# TemplateBackEnd
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(NomeDoProjeto). !!** 
+# Ilha Primeira G2
 
-**!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: 2024.1_PFE1_ProjetoPandora!!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 02<br>
 **Código da Disciplina**: FGA0208-T01<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202208385087  | Gabriel Perrota |
+| 202301165784  | Guilherme Maranhão |
+| 202302174264  | Pedro Caravellos |
+| 202307539741  | Thiago Neves |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Primeira, proporcionando uma ferramenta eficiente para o preenchimento do censo demográfico da região. Acreditamos que, ao coletar e organizar essas informações de forma estruturada, será possível dar maior visibilidade aos desafios enfrentados pela comunidade, especialmente no que diz respeito à infraestrutura e às necessidades básicas da população. Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
