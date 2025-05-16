@@ -20,11 +20,9 @@ Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento
 ## Instalação 
 **Linguagens**: Python, HTML, CSS e JavaScript <br>
 **Tecnologias**: VSCode, GitHub<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Preenchimento e exportação de dados por meio de um formulário digital
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto final.
