@@ -1,0 +1,18 @@
+[
+  {
+    "username": "criador1",
+    "title": "Título Vídeo 1",
+    "description": "Descrição do vídeo 1",
+    "content_type": "video",
+    "file_url": "https://example.com/media/video1.mp4",
+    "thumbnail_url": "https://example.com/media/thumb1.jpg"
+  },
+  {
+    "username": "criador2",
+    "title": "Título Áudio 2",
+    "description": "Descrição do áudio 2",
+    "content_type": "audio",
+    "file_url": "https://example.com/media/audio2.mp3",
+    "thumbnail_url": "https://example.com/media/thumb2.jpg"
+  }
+]
