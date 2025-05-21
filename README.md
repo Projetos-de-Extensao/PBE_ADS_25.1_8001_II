@@ -12,7 +12,9 @@
 | 202307539741  | Thiago Neves |
 
 ## Sobre 
-Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Primeira, proporcionando uma ferramenta eficiente para o preenchimento do censo demográfico da região. Acreditamos que, ao coletar e organizar essas informações de forma estruturada, será possível dar maior visibilidade aos desafios enfrentados pela comunidade, especialmente no que diz respeito à infraestrutura e às necessidades básicas da população. Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
+Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Primeira, proporcionando uma ferramenta eficiente para o preenchimento do censo demográfico da região. Acreditamos que, ao coletar e organizar essas informações de forma estruturada, será possível dar maior visibilidade aos desafios enfrentados pela comunidade, especialmente no que diz respeito à infraestrutura e às necessidades básicas da população.
+
+Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
