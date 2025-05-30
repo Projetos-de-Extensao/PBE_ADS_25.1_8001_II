@@ -1,33 +1,42 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from censoApp.models import Domicilio, Morador, Rendimento, Mortalidade, PrestadorInformacao, RegistroCivil, Contato
-from censoApp.serializers import DomicilioSerializer, MoradorSerializer, RendimentoSerializer, MortalidadeSerializer, PrestadorInformacaoSerializer, RegistroCivilSerializer, ContatoSerializer
+from censoApp.models import Domicilio, Morador, Falecimento, Religiao, Rua, Informante, Contato, Trabalho, Deslocamento
+from censoApp.serializers import RuaSerializer, MoradorSerializer, DomicilioSerializer, FalecimentoSerializer, ReligiaoSerializer, InformanteCivilSerializer, ContatoSerializer, TrabalhoSerializer, DeslocamentoSerializer
 
-class DomicilioViewSet(viewsets.ModelViewSet):
-    queryset = Domicilio.objects.all()
-    serializer_class = DomicilioSerializer
+class RuaViewSet(viewsets.ModelViewSet):
+    queryset = Rua.objects.all()
+    serializer_class = RuaSerializer
 
 class MoradorViewSet(viewsets.ModelViewSet):
     queryset = Morador.objects.all()
     serializer_class = MoradorSerializer
 
-class RendimentoViewSet(viewsets.ModelViewSet):
-    queryset = Rendimento.objects.all()
-    serializer_class = RendimentoSerializer
+class DomicilioViewSet(viewsets.ModelViewSet):
+    queryset = Domicilio.objects.all()
+    serializer_class = DomicilioSerializer
 
-class MortalidadeViewSet(viewsets.ModelViewSet):
-    queryset = Mortalidade.objects.all()
-    serializer_class = MortalidadeSerializer
+class FalecimentoViewSet(viewsets.ModelViewSet):
+    queryset = Falecimento.objects.all()
+    serializer_class = FalecimentoSerializer
 
-class PrestadorInformacaoViewSet(viewsets.ModelViewSet):
-    queryset = PrestadorInformacao.objects.all()
-    serializer_class = PrestadorInformacaoSerializer
+class ReligiaoViewSet(viewsets.ModelViewSet):
+    queryset = Religiao.objects.all()
+    serializer_class = ReligiaoSerializer
 
-class RegistroCivilViewSet(viewsets.ModelViewSet):
-    queryset = RegistroCivil.objects.all()
-    serializer_class = RegistroCivilSerializer
+class InformanteCivilViewSet(viewsets.ModelViewSet):
+    queryset = Informante.objects.all()
+    serializer_class = InformanteCivilSerializer
 
 class ContatoViewSet(viewsets.ModelViewSet):
     queryset = Contato.objects.all()
     serializer_class = ContatoSerializer
+
+class TrabalhoViewSet(viewsets.ModelViewSet):
+    queryset = Trabalho.objects.all()
+    serializer_class = TrabalhoSerializer
+
+class DeslocamentoViewSet(viewsets.ModelViewSet):
+    queryset = Deslocamento.objects.all()
+    serializer_class = DeslocamentoSerializer
+

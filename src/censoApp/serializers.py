@@ -1,10 +1,12 @@
 from rest_framework import serializers
-from censoApp.models import Morador
+from censoApp.models import Deslocamento
+from censoApp.models import Trabalho
 from censoApp.models import Domicilio
-from censoApp.models import Mortalidade
-from censoApp.models import Rendimento
-from censoApp.models import PrestadorInformacao
-from censoApp.models import RegistroCivil
+from censoApp.models import Falecimento
+from censoApp.models import Morador
+from censoApp.models import Informante
+from censoApp.models import Rua
+from censoApp.models import Religiao
 from censoApp.models import Contato
 
 
@@ -18,27 +20,37 @@ class DomicilioSerializer(serializers.ModelSerializer):
         model = Domicilio
         fields = '__all__'
 
-class MortalidadeSerializer(serializers.ModelSerializer):
+class FalecimentoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Mortalidade
+        model = Falecimento
         fields = '__all__'
 
-class RendimentoSerializer(serializers.ModelSerializer):
+class ReligiaoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Rendimento
+        model = Religiao
         fields = '__all__'
 
-class PrestadorInformacaoSerializer(serializers.ModelSerializer):
+class RuaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = PrestadorInformacao
+        model = Rua
         fields = '__all__'
 
-class RegistroCivilSerializer(serializers.ModelSerializer):
+class InformanteCivilSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RegistroCivil
+        model = Informante
         fields = '__all__'
 
 class ContatoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contato
+        fields = '__all__'
+
+class TrabalhoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Trabalho
+        fields = '__all__'
+
+class DeslocamentoSerializer(serializers.ModelSerializer):  
+    class Meta:
+        model = Deslocamento
         fields = '__all__'
