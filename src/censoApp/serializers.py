@@ -8,37 +8,37 @@ from censoApp.models import RegistroCivil
 from censoApp.models import Contato
 
 
-class ContentSerializer(serializers.ModelSerializer):
+class MoradorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Morador
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class DomicilioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Domicilio
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class MortalidadeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Mortalidade
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class RendimentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rendimento
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class PrestadorInformacaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = PrestadorInformacao
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class RegistroCivilSerializer(serializers.ModelSerializer):
     class Meta:
         model = RegistroCivil
         fields = '__all__'
 
-class ContentSerializer(serializers.ModelSerializer):
+class ContatoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contato
         fields = '__all__'
