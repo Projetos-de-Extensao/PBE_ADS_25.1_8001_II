@@ -1,78 +1,115 @@
 @startuml
-' Título do Diagrama
-title Diagrama de Classes - Questionário Básico Censo Ilha Primeira
+skinparam classAttributeIconSize 0
 
-' CLASSES PRINCIPAIS
 class Domicilio {
-  - uf: String
-  - municipio: String
-  - distrito: String
-  - subdistrito: String
-  - setor: String
-  - tipoDomicilio: TipoDomicilio
-  - tipoConstrucao: TipoConstrucao
-  - abastecimentoAgua: FormaAgua
-  - destinoLixo: DestinoLixo
-  - numeroBanheiros: int
-  - esgoto: String
+  +id: int
+  +numero: int
+  +endereco: String
+  +especie: String
+  +tipo: String
+  +agua: String
+  +energia: String
+  +internet: boolean
+  +maquina_lavar: boolean
+  +coleta_lixo: String
+  +comodos: int
+  +dormitorios: int
+  +banheiros_com_chuveiro: int
+  +banheiros_sem_chuveiro: int
+  +condicao_ocupacao: String
+  +principais_demandas: String
+}
+
+class Rua {
+  +nome: String
 }
 
 class Morador {
-  - nome: String
-  - sobrenome: String
-  - sexo: Sexo
-  - dataNascimento: Date
-  - parentesco: Parentesco
-  - corRaca: CorRaca
-  - falaPortugues: SimNao
-  - consideraIndigena: SimNao
-  - consideraQuilombola: SimNao
-  - etnia1: String
-  - etnia2: String
-  - falaLinguaIndigena: SimNao
-  - lingua1: String
-  - lingua2: String
-  - lingua3: String
-  - sabeLerEscrever: SimNao
+  +id: int
+  +nome: String
+  +sobrenome: String
+  +sexo: String
+  +data_nascimento: Date
+  +parentesco: String
+  +registro_nascimento: String
+  +tem_conjuge: boolean
+  +nome_conjuge: String
+  +tipo_uniao: String
+  +sabe_ler: boolean
+  +frequenta_escola: String
+  +curso_frequenta: String
+  +concluiu_superior: boolean
+  +possui_deficiencia: String
+  +diagnostico_autismo: boolean
+  +trabalha: boolean
+  +faixa_renda: String
 }
 
-class Rendimento {
-  - valor: float
-  - faixa: String
-  - tipo: String
+class Trabalho {
+  +ocupacao: String
+  +atividade: String
+  +local: String
+  +tipo_contrato: String
+  +empresa_registrada: boolean
+  +infraestrutura: String
+  +deslocamento: boolean
+  +dificuldades: String
+  +rendimento_suficiente: boolean
+  +interesse_cursos: boolean
+  +trabalho_sazonal: boolean
+  +familia_envovida: boolean
+  +destino_produto: String
+  +acesso_credito: boolean
+  +associacoes: String
+  +sustentabilidade: String
+  +impacto_ambiental: String
+  +expansao_futura: boolean
+  +integracao_comunidade: boolean
+  +melhorias_sugeridas: String
 }
 
-class Mortalidade {
-  - nome: String
-  - sobrenome: String
-  - sexo: Sexo
-  - idadeAnos: int
-  - idadeMeses: int
-  - dataFalecimento: Date
+class Deslocamento {
+  +local_trabalho: String
+  +estado: String
+  +municipio: String
+  +pais: String
+  +retorna_casa: boolean
+  +tempo_horas: int
+  +tempo_minutos: int
+  +meio_transporte: String
 }
 
-class PrestadorInformacao {
-  - quemPrestou: String
-  - nomeOutroMorador: String
+class Falecimento {
+  +nome: String
+  +sobrenome: String
+  +sexo: String
+  +idade: int
+  +data: Date
+  +tempo_conclusao: String
 }
 
-class RegistroCivil {
-  - tipoRegistro: String
+class Religiao {
+  +descricao: String
 }
 
 class Contato {
-  - nome: String
-  - email: String
-  - telefone: String
-  - cpf: String
+  +nome: String
+  +email: String
+  +telefone: String
 }
 
-' RELACIONAMENTOS
+class Informante {
+  +nome: String
+  +relacao_domicilio: String
+}
+
 Domicilio "1" -- "0..*" Morador
-Domicilio "1" -- "0..*" Mortalidade
-Morador "0..1" -- "1" RegistroCivil
-Morador "0..1" -- "1" Rendimento
-Morador "1" -- "1" PrestadorInformacao
+Domicilio "1" -- "1..*" Rua
+Morador "0..1" -- "1" Falecimento
 Morador "1" -- "1" Contato
+Morador "0..1" -- "1" Trabalho
+Morador "0..1" -- "1" Deslocamento
+Domicilio "1" -- "1" Religiao
+Domicilio "1" -- "1" Informante
 
 @enduml

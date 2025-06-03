@@ -55,25 +55,51 @@ TIPO_DOMICILIO_CHOICES = [
     ('alojamento', 'Alojamento'),
     ('outros', 'Outros'),
 ]
+TIPO_RELIGIAO_CHOICES = [
+    ('catolica', 'Católica'),
+    ('evangelica', 'Evangélica'),
+    ('espirita', 'Espírita'),
+    ('umbanda', 'Umbanda'),
+    ('candomble', 'Candomblé'),
+    ('islamica', 'Islâmica'),
+    ('budista', 'Budista'),
+    ('judaica', 'Judaica'),
+    ('hindu', 'Hindu'),
+    ('ateu', 'Ateu'),
+    ('agnostico', 'Agnóstico'),
+    ('outra', 'Outra religião'),
+]
+TIPO_RUA_CHOICES = [
+    ('asfalto', 'Asfalto'),
+    ('paralelepipedo', 'Paralelepípedo'),
+    ('terra', 'Terra'),
+    ('outro', 'Outro tipo de rua'),
+]
+TIPO_INFORMANTE_CHOICES = [
+    ('responsavel', 'Responsável pelo domicílio'),
+    ('conjuge', 'Cônjuge ou companheiro(a)'),
+    ('filho', 'Filho(a) do responsável'),
+    ('outro', 'Outro parente ou agregado'),
+]
 
 # ==== MODELOS ==== #
 
 class Rua(models.Model):
-    nome = models.CharField(max_length=100, null=False, blank=False)
+    nome = models.CharField(max_length=100, choices=TIPO_RUA_CHOICES, null=False, blank=False)
 
     def __str__(self):
         return self.nome
 
 
 class Religiao(models.Model):
-    descricao = models.CharField(max_length=100, null=False, blank=False)
+    descricao = models.CharField(max_length=100, choices=TIPO_RELIGIAO_CHOICES, null=False, blank=False)
 
     def __str__(self):
         return self.descricao
 
 
 class Informante(models.Model):
-    nome = models.CharField(max_length=100, null=False, blank=False)
+    nome = models.CharField(max_length=100, choices=TIPO_INFORMANTE_CHOICES, null=False, blank=False)
     relacao_domicilio = models.CharField(max_length=100, null=False, blank=False)
 
 
