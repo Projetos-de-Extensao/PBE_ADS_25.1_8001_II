@@ -1,8 +1,26 @@
 @startuml
 skinparam classAttributeIconSize 0
 
+class Rua {
+  +nome: String
+}
+
+class Religiao {
+  +descricao: String
+}
+
+class Informante {
+  +nome: String
+  +relacao_domicilio: String
+}
+
+class Contato {
+  +nome: String
+  +email: String
+  +telefone: String
+}
+
 class Domicilio {
-  +id: int
   +numero: int
   +endereco: String
   +especie: String
@@ -20,12 +38,7 @@ class Domicilio {
   +principais_demandas: String
 }
 
-class Rua {
-  +nome: String
-}
-
 class Morador {
-  +id: int
   +nome: String
   +sobrenome: String
   +sexo: String
@@ -39,10 +52,16 @@ class Morador {
   +frequenta_escola: String
   +curso_frequenta: String
   +concluiu_superior: boolean
-  +possui_deficiencia: String
+  +possui_deficiencia: Text
   +diagnostico_autismo: boolean
   +trabalha: boolean
   +faixa_renda: String
+}
+
+class Falecimento {
+  +data: Date
+  +idade: int
+  +tempo_conclusao: String
 }
 
 class Trabalho {
@@ -51,21 +70,21 @@ class Trabalho {
   +local: String
   +tipo_contrato: String
   +empresa_registrada: boolean
-  +infraestrutura: String
+  +infraestrutura: Text
   +deslocamento: boolean
-  +dificuldades: String
+  +dificuldades: Text
   +rendimento_suficiente: boolean
   +interesse_cursos: boolean
   +trabalho_sazonal: boolean
   +familia_envovida: boolean
   +destino_produto: String
   +acesso_credito: boolean
-  +associacoes: String
-  +sustentabilidade: String
-  +impacto_ambiental: String
+  +associacoes: Text
+  +sustentabilidade: Text
+  +impacto_ambiental: Text
   +expansao_futura: boolean
   +integracao_comunidade: boolean
-  +melhorias_sugeridas: String
+  +melhorias_sugeridas: Text
 }
 
 class Deslocamento {
@@ -79,37 +98,13 @@ class Deslocamento {
   +meio_transporte: String
 }
 
-class Falecimento {
-  +nome: String
-  +sobrenome: String
-  +sexo: String
-  +idade: int
-  +data: Date
-  +tempo_conclusao: String
-}
-
-class Religiao {
-  +descricao: String
-}
-
-class Contato {
-  +nome: String
-  +email: String
-  +telefone: String
-}
-
-class Informante {
-  +nome: String
-  +relacao_domicilio: String
-}
-
-Domicilio "1" -- "0..*" Morador
-Domicilio "1" -- "1..*" Rua
-Morador "0..1" -- "1" Falecimento
-Morador "1" -- "1" Contato
-Morador "0..1" -- "1" Trabalho
-Morador "0..1" -- "1" Deslocamento
-Domicilio "1" -- "1" Religiao
-Domicilio "1" -- "1" Informante
-
+' Relacionamentos
+Domicilio --> "0..1" Rua
+Domicilio --> "0..1" Religiao
+Domicilio --> "0..1" Informante
+Morador --> "1" Domicilio
+Morador --> "0..1" Contato
+Falecimento --> "1" Morador
+Trabalho --> "1" Morador
+Deslocamento --> "1" Morador
 @enduml
