@@ -82,10 +82,19 @@ TIPO_INFORMANTE_CHOICES = [
     ('outro', 'Outro parente ou agregado'),
 ]
 
+TIPO_CONTATO_CHOICES = [
+    ('telefone', 'Telefone'),
+    ('email', 'Email'),
+    ('whatsapp', 'WhatsApp'),
+    ('outro', 'Outro meio de contato'),
+    
+]
+
 # ==== MODELOS ==== #
 
 class Rua(models.Model):
     nome = models.CharField(max_length=100, choices=TIPO_RUA_CHOICES, null=False, blank=False)
+    Domicilio = models.ForeignKey('Domicilio', on_delete=models.CASCADE, null=False, blank=False)
 
     def __str__(self):
         return self.nome
@@ -93,6 +102,7 @@ class Rua(models.Model):
 
 class Religiao(models.Model):
     descricao = models.CharField(max_length=100, choices=TIPO_RELIGIAO_CHOICES, null=False, blank=False)
+    Morador = models.ForeignKey('Morador', on_delete=models.CASCADE, null=False, blank=False)
 
     def __str__(self):
         return self.descricao
@@ -101,18 +111,19 @@ class Religiao(models.Model):
 class Informante(models.Model):
     nome = models.CharField(max_length=100, choices=TIPO_INFORMANTE_CHOICES, null=False, blank=False)
     relacao_domicilio = models.CharField(max_length=100, null=False, blank=False)
+    Domicilio = models.ForeignKey('Domicilio', on_delete=models.CASCADE, null=True, blank=False)
 
 
 class Contato(models.Model):
     nome = models.CharField(max_length=100, null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
     telefone = models.CharField(max_length=20, null=False, blank=False)
+    Domicilio = models.ForeignKey('Domicilio', on_delete=models.CASCADE, null=True, blank=False)
 
 
 class Domicilio(models.Model):
     numero = models.IntegerField(null=False, blank=False)
     endereco = models.CharField(max_length=255, null=False, blank=False)
-    rua = models.ForeignKey(Rua, on_delete=models.SET_NULL, null=True, blank=True)
     especie = models.CharField(max_length=100, null=False, blank=False)
     tipo = models.CharField(max_length=30, choices=TIPO_DOMICILIO_CHOICES, null=False, blank=False)
     agua = models.CharField(max_length=100, null=False, blank=False)
@@ -126,9 +137,11 @@ class Domicilio(models.Model):
     banheiros_sem_chuveiro = models.IntegerField(null=False, blank=False)
     condicao_ocupacao = models.CharField(max_length=30, choices=CONDICAO_OCUPACAO_CHOICES, null=False, blank=False)
     principais_demandas = models.TextField(null=False, blank=False)
-    religiao = models.ForeignKey(Religiao, on_delete=models.SET_NULL, null=True, blank=True)
-    informante = models.OneToOneField(Informante, on_delete=models.SET_NULL, null=True, blank=True)
 
+    def __str__(self):
+        return self.endereco
+
+    
 
 class Morador(models.Model):
     nome = models.CharField(max_length=100, null=False, blank=False)
@@ -148,8 +161,12 @@ class Morador(models.Model):
     diagnostico_autismo = models.BooleanField(null=False, blank=False)
     trabalha = models.BooleanField(null=False, blank=False)
     faixa_renda = models.CharField(max_length=50, null=False, blank=False)
-    contato = models.OneToOneField(Contato, on_delete=models.SET_NULL, null=True, blank=True)
     domicilio = models.ForeignKey(Domicilio, on_delete=models.CASCADE, null=False, blank=False)
+
+    def __str__(self):
+        return self.nome
+
+
 
 
 class Falecimento(models.Model):
