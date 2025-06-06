@@ -1,110 +1,115 @@
 @startuml
-skinparam classAttributeIconSize 0
-
 class Rua {
-  +nome: String
+    +nome: CharField
+    +Domicilio: ForeignKey -> Domicilio
 }
 
 class Religiao {
-  +descricao: String
+    +descricao: CharField
+    +Morador: ForeignKey -> Morador
 }
 
 class Informante {
-  +nome: String
-  +relacao_domicilio: String
+    +nome: CharField
+    +relacao_domicilio: CharField
+    +Domicilio: ForeignKey -> Domicilio
 }
 
 class Contato {
-  +nome: String
-  +email: String
-  +telefone: String
+    +nome: CharField
+    +email: EmailField
+    +telefone: CharField
+    +Domicilio: ForeignKey -> Domicilio
 }
 
 class Domicilio {
-  +numero: int
-  +endereco: String
-  +especie: String
-  +tipo: String
-  +agua: String
-  +energia: String
-  +internet: boolean
-  +maquina_lavar: boolean
-  +coleta_lixo: String
-  +comodos: int
-  +dormitorios: int
-  +banheiros_com_chuveiro: int
-  +banheiros_sem_chuveiro: int
-  +condicao_ocupacao: String
-  +principais_demandas: String
+    +numero: IntegerField
+    +endereco: CharField
+    +especie: CharField
+    +tipo: CharField (choices)
+    +agua: CharField
+    +energia: CharField
+    +internet: BooleanField
+    +maquina_lavar: BooleanField
+    +coleta_lixo: CharField
+    +comodos: IntegerField
+    +dormitorios: IntegerField
+    +banheiros_com_chuveiro: IntegerField
+    +banheiros_sem_chuveiro: IntegerField
+    +condicao_ocupacao: CharField (choices)
+    +principais_demandas: TextField
 }
 
 class Morador {
-  +nome: String
-  +sobrenome: String
-  +sexo: String
-  +data_nascimento: Date
-  +parentesco: String
-  +registro_nascimento: String
-  +tem_conjuge: boolean
-  +nome_conjuge: String
-  +tipo_uniao: String
-  +sabe_ler: boolean
-  +frequenta_escola: String
-  +curso_frequenta: String
-  +concluiu_superior: boolean
-  +possui_deficiencia: Text
-  +diagnostico_autismo: boolean
-  +trabalha: boolean
-  +faixa_renda: String
+    +nome: CharField
+    +sobrenome: CharField
+    +sexo: CharField (choices)
+    +data_nascimento: DateField
+    +parentesco: CharField (choices)
+    +registro_nascimento: CharField (choices)
+    +tem_conjuge: BooleanField
+    +nome_conjuge: CharField
+    +tipo_uniao: CharField
+    +sabe_ler: BooleanField
+    +frequenta_escola: CharField
+    +curso_frequenta: CharField
+    +concluiu_superior: BooleanField
+    +possui_deficiencia: TextField
+    +diagnostico_autismo: BooleanField
+    +trabalha: BooleanField
+    +faixa_renda: CharField
+    +domicilio: ForeignKey -> Domicilio
 }
 
 class Falecimento {
-  +data: Date
-  +idade: int
-  +tempo_conclusao: String
+    +data: DateField
+    +idade: IntegerField
+    +tempo_conclusao: CharField
+    +morador: OneToOneField -> Morador
 }
 
 class Trabalho {
-  +ocupacao: String
-  +atividade: String
-  +local: String
-  +tipo_contrato: String
-  +empresa_registrada: boolean
-  +infraestrutura: Text
-  +deslocamento: boolean
-  +dificuldades: Text
-  +rendimento_suficiente: boolean
-  +interesse_cursos: boolean
-  +trabalho_sazonal: boolean
-  +familia_envovida: boolean
-  +destino_produto: String
-  +acesso_credito: boolean
-  +associacoes: Text
-  +sustentabilidade: Text
-  +impacto_ambiental: Text
-  +expansao_futura: boolean
-  +integracao_comunidade: boolean
-  +melhorias_sugeridas: Text
+    +ocupacao: CharField
+    +atividade: CharField
+    +local: CharField
+    +tipo_contrato: CharField
+    +empresa_registrada: BooleanField
+    +infraestrutura: TextField
+    +deslocamento: BooleanField
+    +dificuldades: TextField
+    +rendimento_suficiente: BooleanField
+    +interesse_cursos: BooleanField
+    +trabalho_sazonal: BooleanField
+    +familia_envovida: BooleanField
+    +destino_produto: CharField
+    +acesso_credito: BooleanField
+    +associacoes: TextField
+    +sustentabilidade: TextField
+    +impacto_ambiental: TextField
+    +expansao_futura: BooleanField
+    +integracao_comunidade: BooleanField
+    +melhorias_sugeridas: TextField
+    +morador: OneToOneField -> Morador
 }
 
 class Deslocamento {
-  +local_trabalho: String
-  +estado: String
-  +municipio: String
-  +pais: String
-  +retorna_casa: boolean
-  +tempo_horas: int
-  +tempo_minutos: int
-  +meio_transporte: String
+    +local_trabalho: CharField
+    +estado: CharField
+    +municipio: CharField
+    +pais: CharField
+    +retorna_casa: BooleanField
+    +tempo_horas: IntegerField
+    +tempo_minutos: IntegerField
+    +meio_transporte: CharField
+    +morador: OneToOneField -> Morador
 }
 
-' Relacionamentos
-Domicilio --> "0..1" Rua
-Domicilio --> "0..1" Religiao
-Domicilio --> "0..1" Informante
-Morador --> "1" Domicilio
-Morador --> "0..1" Contato
-Falecimento --> "1" Morador
-Trabalho --> "1" Morador
-Deslocamento --> "1" Morador
+Domicilio "1" -- "many" Morador
+Domicilio "1" -- "1" Rua
+Domicilio "1" -- "1" Informante
+Domicilio "1" -- "many" Contato
+Morador "1" -- "1" Falecimento
+Morador "1" -- "1" Trabalho
+Morador "1" -- "1" Deslocamento
+Morador "1" -- "many" Religiao
 @enduml
