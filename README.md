@@ -31,3 +31,24 @@ Adicione 1 ou mais vídeos com a execução do projeto final.
 
 ## Outros 
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+
+## Tutorial de instalação das ferramentas
+
+1- Instalar o Django:  
+Execute o seguinte comando no terminal →  
+
+```bash
+pip install django
+```
+
+2- Instalar o Djangorest → 
+
+```bash
+pip install djangorestframework
+```
+
+3- Instalar o swagger → 
+
+```
+pip install drf-yasg
+```
