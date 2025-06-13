@@ -35,19 +35,21 @@ Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 ## Tutorial de instalação das ferramentas
 
 1- Instalar o Django:  
-Execute o seguinte comando no terminal →  
+Execute:
 
 ```bash
 pip install django
 ```
 
-2- Instalar o Djangorest → 
+2- Instalar o Djangorest:
+Execute:
 
 ```bash
 pip install djangorestframework
 ```
 
-3- Instalar o swagger → 
+3- Instalar o swagger:
+Execute:
 
 ```
 pip install drf-yasg
