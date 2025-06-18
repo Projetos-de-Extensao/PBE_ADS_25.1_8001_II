@@ -1,9 +1,9 @@
-# Ilha Primeira G2
+# 🏝️Ilha Primeira G2
 
 **Número do Grupo**: 02<br>
 **Código da Disciplina**: FGA0208-T01<br>
 
-## Alunos
+## 👨‍🎓Alunos
 |Matrícula | Aluno |
 | -- | -- |
 | 202208385087  | Gabriel Perrota |
@@ -11,28 +11,18 @@
 | 202302174264  | Pedro Caravellos |
 | 202307539741  | Thiago Neves |
 
-## Sobre 
+## 🧭Sobre 
 Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Primeira, proporcionando uma ferramenta eficiente para o preenchimento do censo demográfico da região. Acreditamos que, ao coletar e organizar essas informações de forma estruturada, será possível dar maior visibilidade aos desafios enfrentados pela comunidade, especialmente no que diz respeito à infraestrutura e às necessidades básicas da população.
 
 Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
 
-<h2>📸 Screenshots</h2>
+## 📸Screenshots
+<p align="center">
+  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" width="200" />
+  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" width="525" />
+</p>
 
-<div style="display: flex; justify-content: center; gap: 40px;">
-
-  <div style="text-align: center;">
-    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg?raw=true" alt="Mapa da Ilha Primeira" width="250">
-    <p><strong>Mapa da Ilha Primeira</strong></p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png?raw=true" alt="Cadastro de Dados" width="400">
-    <p><strong>Cadastro de Dados</strong></p>
-  </div>
-
-</div>
-
-## Tecnologias e Linguagens 
+## 🛠️Tecnologias e Linguagens 
 **Python + Django:** O backend da aplicação foi desenvolvido com Django, framework web robusto baseado em Python, que fornece ORM nativo, segurança, sistema de administração e excelente integração com bancos relacionais.
 
 **MkDocs:** Ferramenta utilizada para a documentação do projeto, permitindo uma apresentação clara, navegável e responsiva do conteúdo.
@@ -43,10 +33,14 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 
 **SQLite:** Para armazenamento local dos dados durante o desenvolvimento e testes.
 
-## Uso 
-Preenchimento e exportação de dados por meio de um formulário digital
+## 📝Funcionalidades
 
-## Tutorial de instalação das ferramentas
+**O sistema permite:**
+- Preenchimento de dados demográficos por meio de um formulário digital acessível.
+- Armazenamento automático das informações em banco de dados local.
+- Exportação estruturada dos dados coletados, facilitando análises e relatórios.
+
+## 🚀Tutorial de instalação das ferramentas
 
 1. Clonar o Repositório
 Abra o terminal e execute:
