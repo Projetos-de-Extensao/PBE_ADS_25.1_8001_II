@@ -16,11 +16,18 @@ Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Pr
 
 Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
 
-## Screenshots
-<p align="center">
-  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" width="200" />
-  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" width="525" />
-</p>
+<h2>📸 Screenshots</h2>
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <div style="text-align: center;">
+    <p><strong>Mapa da Ilha Primeira</strong></p>
+    <img src="docs/imagens/mapa.png" alt="Mapa da Ilha Primeira" width="250"/>
+  </div>
+  <div style="text-align: center;">
+    <p><strong>Cadastro de Dados</strong></p>
+    <img src="docs/imagens/formularios.png" alt="Formulário de Cadastro" width="400"/>
+  </div>
+</div>
 
 ## Tecnologias e Linguagens 
 **Python + Django:** O backend da aplicação foi desenvolvido com Django, framework web robusto baseado em Python, que fornece ORM nativo, segurança, sistema de administração e excelente integração com bancos relacionais.
