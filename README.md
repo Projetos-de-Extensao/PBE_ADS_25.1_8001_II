@@ -19,15 +19,19 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
 
-## Instalação 
-**Linguagens**: Python, HTML, CSS e JavaScript <br>
-**Tecnologias**: VSCode, GitHub<br>
+## Tecnologias e Linguagens 
+**Python + Django:** O backend da aplicação foi desenvolvido com Django, framework web robusto baseado em Python, que fornece ORM nativo, segurança, sistema de administração e excelente integração com bancos relacionais.
+
+**MkDocs:** Ferramenta utilizada para a documentação do projeto, permitindo uma apresentação clara, navegável e responsiva do conteúdo.
+
+**PlantUML:** Usado para geração de diagramas de classes com base nos modelos definidos no Django, facilitando o entendimento da estrutura de dados.
+
+**Git + GitHub:** Para controle de versão, rastreamento de alterações e colaboração entre os membros da equipe.
+
+**SQLite** (ou outro banco relacional): Para armazenamento local dos dados durante o desenvolvimento e testes.
 
 ## Uso 
 Preenchimento e exportação de dados por meio de um formulário digital
-
-## Outros 
-O impacto esperado inclui a democratização do acesso à informação, o fortalecimento da gestão comunitária e a ampliação das possibilidades de investimento social e ambiental sustentável na Ilha Primeira.
 
 ## Tutorial de instalação das ferramentas
 
