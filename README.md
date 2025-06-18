@@ -17,7 +17,7 @@ Nosso objetivo é desenvolver um aplicativo voltado para os moradores da Ilha Pr
 Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas também fomentar iniciativas e soluções que possam contribuir para a melhoria da qualidade de vida dos moradores, promovendo mudanças significativas e duradouras. 
 
 ## Screenshots
-![Ilha Primeira](https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg)
+<img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" width="200"/>
 
 ## Tecnologias e Linguagens 
 **Python + Django:** O backend da aplicação foi desenvolvido com Django, framework web robusto baseado em Python, que fornece ORM nativo, segurança, sistema de administração e excelente integração com bancos relacionais.
