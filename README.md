@@ -21,11 +21,11 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
   <div style="text-align: center;">
     <p><strong>Mapa da Ilha Primeira</strong></p>
-    <img src="docs/imagens/mapa.png" alt="Mapa da Ilha Primeira" width="250"/>
+    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" alt="Mapa da Ilha Primeira" width="250"/>
   </div>
   <div style="text-align: center;">
     <p><strong>Cadastro de Dados</strong></p>
-    <img src="docs/imagens/formularios.png" alt="Formulário de Cadastro" width="400"/>
+    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" alt="Formulário de Cadastro" width="400"/>
   </div>
 </div>
 
