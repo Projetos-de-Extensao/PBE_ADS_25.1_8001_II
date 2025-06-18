@@ -18,6 +18,8 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 
 ## Screenshots
 <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" width="200"/>
+<img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.jpeg" width="200"/>
+<img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image (1).jpeg" width="200"/>
 
 ## Tecnologias e Linguagens 
 **Python + Django:** O backend da aplicação foi desenvolvido com Django, framework web robusto baseado em Python, que fornece ORM nativo, segurança, sistema de administração e excelente integração com bancos relacionais.
