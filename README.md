@@ -26,31 +26,61 @@ Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento
 ## Uso 
 Preenchimento e exportação de dados por meio de um formulário digital
 
-## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto final.
-
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+O impacto esperado inclui a democratização do acesso à informação, o fortalecimento da gestão comunitária e a ampliação das possibilidades de investimento social e ambiental sustentável na Ilha Primeira.
 
 ## Tutorial de instalação das ferramentas
 
-1- Instalar o Django:  
-Execute:
+1. Clonar o Repositório
+Abra o terminal e execute:
 
 ```bash
-pip install django
+git clone https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II
+```
+```bash
+cd src 
 ```
 
-2- Instalar o Djangorest:
-Execute:
+2. Criar e Ativar o Ambiente Virtual
+bash
 
 ```bash
-pip install djangorestframework
+python -m venv venv
 ```
 
-3- Instalar o swagger:
-Execute:
+3. Instalar as Dependências
 
+```bash
+pip install -r requirements.txt
 ```
-pip install drf-yasg
+
+4. Aplicar as Migrações
+bash
+
+```bash
+python manage.py makemigrations
 ```
+```bash
+python manage.py migrate
+```
+
+5. Criar um Superusuário (opcional, para acesso ao painel admin)
+
+```bash
+python manage.py createsuperuser
+```
+
+6. Executar o Servidor
+
+```bash
+python manage.py runserver
+```
+Acesse o projeto no navegador:
+http://127.0.0.1:8000
+
+7. Acessar o Painel de Administração
+http://127.0.0.1:8000/admin/
+
+8. Documentação Interativa (Swagger)
+Se configurado corretamente, a documentação da API estará disponível em:
+http://127.0.0.1:8000/swagger/
