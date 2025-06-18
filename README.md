@@ -18,15 +18,18 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 
 <h2>📸 Screenshots</h2>
 
-<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+<div style="display: flex; justify-content: center; gap: 40px;">
+
   <div style="text-align: center;">
+    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg?raw=true" alt="Mapa da Ilha Primeira" width="250">
     <p><strong>Mapa da Ilha Primeira</strong></p>
-    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" alt="Mapa da Ilha Primeira" width="250"/>
   </div>
+
   <div style="text-align: center;">
+    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png?raw=true" alt="Cadastro de Dados" width="400">
     <p><strong>Cadastro de Dados</strong></p>
-    <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" alt="Formulário de Cadastro" width="400"/>
   </div>
+
 </div>
 
 ## Tecnologias e Linguagens 
