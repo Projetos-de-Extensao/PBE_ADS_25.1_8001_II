@@ -19,7 +19,7 @@ Com esses dados, pretendemos não apenas evidenciar as carências da ilha, mas t
 ## Screenshots
 <p align="center">
   <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/Ilha_primeira.jpeg" width="200" />
-  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" width="550" />
+  <img src="https://github.com/Projetos-de-Extensao/PBE_ADS_25.1_8001_II/blob/main/docs/image.png" width="525" />
 </p>
 
 ## Tecnologias e Linguagens 
