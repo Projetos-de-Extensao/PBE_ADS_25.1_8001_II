@@ -28,7 +28,7 @@ Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento
 
 **Git + GitHub:** Para controle de versão, rastreamento de alterações e colaboração entre os membros da equipe.
 
-**SQLite** (ou outro banco relacional): Para armazenamento local dos dados durante o desenvolvimento e testes.
+**SQLite:** Para armazenamento local dos dados durante o desenvolvimento e testes.
 
 ## Uso 
 Preenchimento e exportação de dados por meio de um formulário digital
